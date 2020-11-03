@@ -1,0 +1,17 @@
+import express from 'express'
+import morgan from 'morgan'
+import gzip from 'compression'
+import helmet from 'helmet'
+
+import routes from '@/api'
+
+const app = express()
+
+app.use(morgan(process.env.LOG_LEVEL || 'combined'))
+app.use(gzip())
+app.use(helmet())
+app.use(express.json())
+
+app.use('/', routes)
+
+export default app

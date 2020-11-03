@@ -1,0 +1,13 @@
+version: '3'
+services:
+  NAME:
+    container_name: NAME
+    image: NAME:latest
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - 'PORT:PORT'
+    volumes:
+      - .:/app
+      - /app/node_modules
