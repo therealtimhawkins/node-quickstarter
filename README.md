@@ -1,7 +1,5 @@
 <h1 align="center">🦥 node-quickstarter</h1>
 
-## Features
-
 ## Build
 
 ### Basic
